@@ -1,3 +1,47 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<style>
+    [type='checkbox'] {
+        margin: 10px 0px 15px 0px;
+    }
+
+    #cat-photo-form {
+        background-color: green;
+    }
+
+    .silver-background {
+        background-color: silver;
+    }
+
+    .thick-green-border {
+        border-color: green;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .smaller-image {
+        width: 100px;
+    }
+
+    .red-text {
+        color: red;
+    }
+
+    p {
+        font-size: 16px;
+        font-family: monospace;
+    }
+
+    h2 {
+        font-family: Lobster, monospace;
+    }
+</style>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,14 +51,16 @@
 
 
 <body>
-    <h2>Cat PhotoApp</h2>
+    <h2 id="heading" class="red-text">Cat PhotoApp</h2>
     <main>
         <h3>Cat Photos</h3>
         <!--TODO: Add link to cat photos-->
-        <p>Click here to view more <a href="#" target="_blank">cat photos</a>.</p>
-        <a href="#"><img src="https//fcc.im/fcc-relaxing-cat" alt="A cute orange cat lying on its back"></a>
+        <p class="red-text">Click here to view more <a href="#" target="_blank">cat photos</a>.</p>
+        <a href="#"><img class="smaller-image thick-green-border"
+                src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80"
+                alt="A cute cat"></a>
         <h3>Cat Lists</h3>
-        <div class="lists">
+        <div class="silver-background">
             <p>Things cats <em>love</em></p>
             <ul>
                 <li>cat nip</li>
@@ -31,12 +77,12 @@
             </ol>
         </div>
         <img src="cats.jpeg" alt="Cats">
-        <form acction="/submit-cat-photo">
-            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label><br>
+        <form id="cat-photo-form" action="/submit-cat-photo">
+            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
             <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
 
-            <label for="Loving"><input id="Loving" type="checkbox" name="personality" checked>Loving</label><br>
-            <label for="Lazy"><input id="Lazy" type="checkbox" name="personality">Lazy</label><br>
+            <label for="Loving"><input id="Loving" type="checkbox" name="personality" checked>Loving</label>
+            <label for="Lazy"><input id="Lazy" type="checkbox" name="personality">Lazy</label>
             <label for="Energetic"><input id="Energetic" type="checkbox" name="personality">Energetic</label><br>
 
             <input type="text" placeholder="cat photo URL" required><br>
